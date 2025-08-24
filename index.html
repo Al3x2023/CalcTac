@@ -16,10 +16,8 @@
             --danger: #e74c3c;
             --warning: #f1c40f;
             --info: #3498db;
-            --whatsapp: #25D366;
-            --report: #9b59b6;
-            --border-radius: 8px;
-            --box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            --border-radius: 12px;
+            --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
         }
 
@@ -34,7 +32,7 @@
             background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
             color: var(--dark);
             min-height: 100vh;
-            padding: 12px;
+            padding: 20px;
         }
 
         .container {
@@ -42,24 +40,24 @@
             margin: 0 auto;
             background: white;
             border-radius: var(--border-radius);
-            padding: 15px;
+            padding: 20px;
             box-shadow: var(--box-shadow);
         }
 
         header {
             text-align: center;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
             border-bottom: 2px solid var(--light);
         }
 
         .logo {
-            font-size: 24px;
+            font-size: 32px;
             font-weight: bold;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             color: var(--primary);
         }
 
@@ -70,71 +68,51 @@
         .subtitle {
             color: var(--secondary);
             margin-top: 5px;
-            font-size: 14px;
-        }
-
-        .tabs {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 15px;
-            flex-wrap: wrap;
-        }
-
-        .tab {
-            padding: 10px 16px;
-            background: #f0f0f0;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: var(--transition);
-            font-weight: bold;
-            font-size: 14px;
-        }
-
-        .tab.active {
-            background: var(--primary);
-            color: white;
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
+            font-size: 18px;
         }
 
         .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 900px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .productos-section {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 20px;
         }
 
         .categoria {
             background: #f9f9f9;
-            padding: 12px;
+            padding: 15px;
             border-radius: var(--border-radius);
-            margin-bottom: 10px;
         }
 
         .categoria h3 {
             color: var(--primary);
-            margin-bottom: 10px;
-            padding-bottom: 6px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
             border-bottom: 2px solid var(--accent);
             display: flex;
             align-items: center;
-            gap: 8px;
-            font-size: 16px;
+            gap: 10px;
         }
 
         .botones-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-            gap: 8px;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
         }
 
         .producto-btn {
-            padding: 10px 6px;
+            padding: 15px 10px;
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
             border: none;
@@ -147,37 +125,36 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            min-height: 60px;
-            font-size: 12px;
+            min-height: 80px;
         }
 
         .producto-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .producto-btn .precio {
-            font-size: 11px;
-            margin-top: 4px;
+            font-size: 14px;
+            margin-top: 8px;
             background: rgba(255, 255, 255, 0.2);
-            padding: 2px 6px;
-            border-radius: 8px;
+            padding: 4px 10px;
+            border-radius: 15px;
         }
 
         .cantidad-control {
             display: flex;
             align-items: center;
-            gap: 8px;
-            margin: 12px 0;
-            padding: 10px;
+            gap: 10px;
+            margin: 15px 0;
+            padding: 15px;
             background: #f0f0f0;
             border-radius: var(--border-radius);
             justify-content: center;
         }
 
         .cantidad-btn {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             border: 1px solid #ddd;
             background: white;
@@ -187,7 +164,7 @@
             align-items: center;
             transition: var(--transition);
             font-weight: bold;
-            font-size: 14px;
+            font-size: 18px;
         }
 
         .cantidad-btn:hover {
@@ -195,23 +172,23 @@
         }
 
         .cantidad-input {
-            width: 50px;
+            width: 70px;
             text-align: center;
             border: 1px solid #ddd;
-            border-radius: 4px;
-            padding: 6px;
+            border-radius: 5px;
+            padding: 10px;
             font-weight: bold;
-            font-size: 14px;
+            font-size: 18px;
         }
 
         .cantidad-label {
             font-weight: bold;
-            font-size: 14px;
+            font-size: 18px;
         }
 
         .cuenta-section {
             background: linear-gradient(135deg, #f9f9f9 0%, #f1f1f1 100%);
-            padding: 15px;
+            padding: 20px;
             border-radius: var(--border-radius);
             border: 1px solid #eee;
             display: flex;
@@ -220,21 +197,21 @@
 
         .cuenta-section h3 {
             color: var(--primary);
-            margin-bottom: 12px;
-            padding-bottom: 6px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
             border-bottom: 2px solid var(--accent);
             display: flex;
             align-items: center;
-            gap: 8px;
-            font-size: 16px;
-        }
+            gap: 10px;
+            font-size: 22px;
+}
 
         .productos-lista {
             flex: 1;
-            margin: 8px 0;
+            margin: 10px 0;
             border: 1px solid #eee;
             border-radius: var(--border-radius);
-            max-height: 250px;
+            max-height: 350px;
             overflow-y: auto;
             background: white;
         }
@@ -242,10 +219,9 @@
         .producto-item {
             display: flex;
             justify-content: space-between;
-            padding: 10px;
+            padding: 12px;
             border-bottom: 1px solid #eee;
             transition: var(--transition);
-            font-size: 14px;
         }
 
         .producto-item:hover {
@@ -259,18 +235,18 @@
         .producto-name {
             font-weight: bold;
             color: var(--dark);
+            font-size: 16px;
         }
 
         .producto-details {
-            font-size: 12px;
+            font-size: 14px;
             color: #666;
         }
 
         .producto-total {
             font-weight: bold;
             color: var(--primary);
-            white-space: nowrap;
-            font-size: 14px;
+            font-size: 16px;
         }
 
         .eliminar-btn {
@@ -278,55 +254,56 @@
             border: none;
             color: var(--danger);
             cursor: pointer;
-            margin-left: 8px;
-            font-size: 14px;
+            margin-left: 10px;
+            font-size: 16px;
         }
 
         .totales-container {
             background: white;
-            padding: 12px;
+            padding: 15px;
             border-radius: var(--border-radius);
-            margin: 8px 0;
+            margin: 10px 0;
             border: 1px solid #eee;
-            font-size: 14px;
         }
 
         .total-line {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 8px;
-            padding-bottom: 4px;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
             border-bottom: 1px dashed #eee;
+            font-size: 16px;
         }
 
         .total-final {
             border-top: 2px solid #ddd;
-            padding-top: 8px;
-            margin-top: 8px;
+            padding-top: 10px;
+            margin-top: 10px;
             font-weight: bold;
+            font-size: 1.3em;
         }
 
         .cobrar-button {
             background: linear-gradient(135deg, var(--success) 0%, #2ecc71 100%);
             color: white;
             border: none;
-            padding: 12px;
+            padding: 16px;
             border-radius: var(--border-radius);
             width: 100%;
             font-weight: bold;
             cursor: pointer;
-            margin-top: 8px;
+            margin-top: 10px;
             transition: var(--transition);
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 8px;
-            font-size: 14px;
+            gap: 10px;
+            font-size: 18px;
         }
 
         .cobrar-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .cobrar-button:disabled {
@@ -338,21 +315,20 @@
 
         .toast {
             position: fixed;
-            bottom: 15px;
+            bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
             background: var(--dark);
             color: white;
-            padding: 10px 20px;
-            border-radius: 20px;
+            padding: 12px 25px;
+            border-radius: 30px;
             z-index: 1000;
             opacity: 0;
             transition: opacity 0.3s;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             display: flex;
             align-items: center;
-            gap: 8px;
-            font-size: 14px;
+            gap: 10px;
         }
 
         .toast.show {
@@ -360,27 +336,21 @@
         }
 
         .empty-state {
-            padding: 15px;
+            padding: 20px;
             text-align: center;
             color: #666;
-            font-size: 14px;
+            font-size: 16px;
         }
 
         .acciones-rapidas {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
-            margin-top: 12px;
-        }
-
-        @media (max-width: 480px) {
-            .acciones-rapidas {
-                grid-template-columns: 1fr;
-            }
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
         }
 
         .accion-btn {
-            padding: 10px;
+            flex: 1;
+            padding: 12px;
             border: none;
             border-radius: var(--border-radius);
             cursor: pointer;
@@ -390,7 +360,7 @@
             justify-content: center;
             gap: 5px;
             font-weight: bold;
-            font-size: 13px;
+            font-size: 16px;
         }
 
         .accion-btn.reset {
@@ -403,200 +373,19 @@
             color: white;
         }
 
-        .accion-btn.whatsapp {
-            background: linear-gradient(135deg, var(--whatsapp) 0%, #128C7E 100%);
-            color: white;
-        }
-
-        .accion-btn.reporte {
-            background: linear-gradient(135deg, var(--report) 0%, #8e44ad 100%);
-            color: white;
-        }
-
-        .categorias-container {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 12px;
-        }
-
-        @media (min-width: 768px) {
-            .main-content {
-                display: grid;
-                grid-template-columns: 2fr 1fr;
-                gap: 15px;
-            }
-            
-            .categorias-container {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .categorias-container {
-                grid-template-columns: 1fr 1fr 1fr;
-            }
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-content {
-            background-color: white;
-            padding: 15px;
-            border-radius: var(--border-radius);
-            width: 90%;
-            max-width: 350px;
-            text-align: center;
-        }
-
-        .modal-buttons {
-            display: flex;
-            gap: 8px;
-            justify-content: center;
-            margin-top: 15px;
-        }
-
-        .modal-btn {
-            padding: 8px 16px;
-            border: none;
-            border-radius: var(--border-radius);
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 14px;
-        }
-
-        .modal-btn.cancel {
-            background-color: #ccc;
-        }
-
-        .modal-btn.confirm {
-            background-color: var(--success);
-            color: white;
-        }
-
-        /* Estilos para el reporte */
-        .reporte-container {
-            margin-top: 15px;
-        }
-
-        .reporte-card {
-            background: white;
-            padding: 12px;
-            border-radius: var(--border-radius);
-            margin-bottom: 12px;
-            box-shadow: var(--box-shadow);
-            font-size: 14px;
-        }
-
-        .reporte-header {
+        .categoria-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 8px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid #eee;
+            margin-bottom: 10px;
         }
 
-        .reporte-title {
-            font-weight: bold;
-            color: var(--primary);
-        }
-
-        .reporte-fecha {
-            color: #666;
-            font-size: 12px;
-        }
-
-        .reporte-productos {
-            margin-bottom: 8px;
-        }
-
-        .reporte-producto {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 4px;
-            padding-bottom: 4px;
-            border-bottom: 1px dotted #eee;
-            font-size: 13px;
-        }
-
-        .reporte-totales {
-            font-weight: bold;
-            border-top: 2px solid #eee;
-            padding-top: 8px;
-            margin-top: 8px;
-            font-size: 14px;
-        }
-
-        .resumen-ventas {
-            background: white;
-            padding: 12px;
-            border-radius: var(--border-radius);
-            margin-bottom: 15px;
-            box-shadow: var(--box-shadow);
-        }
-
-        .resumen-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 12px;
-            margin-top: 12px;
-        }
-
-        .resumen-item {
-            background: #f9f9f9;
-            padding: 12px;
-            border-radius: var(--border-radius);
-            text-align: center;
-            border-left: 4px solid var(--primary);
-        }
-
-        .resumen-valor {
-            font-size: 20px;
-            font-weight: bold;
-            color: var(--primary);
-            margin: 8px 0;
-        }
-
-        .resumen-label {
-            color: #666;
-            font-size: 12px;
-        }
-
-        .limpiar-reporte {
-            background: linear-gradient(135deg, var(--danger) 0%, #e74c3c 100%);
-            color: white;
+        .categoria-toggle {
+            background: none;
             border: none;
-            padding: 8px 12px;
-            border-radius: var(--border-radius);
+            color: var(--primary);
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            margin-top: 12px;
-            font-size: 13px;
-        }
-
-        /* Estilo para vista previa de ticket térmico */
-        #ticket-preview {
-            display: none;
-            width: 280px; /* Ancho equivalente a 80mm */
-            font-family: 'Courier New', monospace;
-            font-size: 12px;
-            padding: 10px;
-            background: white;
-            border: 1px dashed #ccc;
-            margin: 20px auto;
+            font-size: 18px;
         }
     </style>
 </head>
@@ -607,214 +396,163 @@
                 <i class="fas fa-utensils"></i>
                 <span>Calculadora de Tacos</span>
             </div>
-            <div class="subtitle">Haz clic en los botones para agregar productos</div>
+            <div class="subtitle">Haz clic en los botones para agregar productos rápidamente</div>
         </header>
 
-        <div class="tabs">
-            <div class="tab active" onclick="cambiarPestaña('calculadora')">Calculadora</div>
-            <div class="tab" onclick="cambiarPestaña('reporte')">Reporte de Ventas</div>
-        </div>
-
-        <div id="calculadora" class="tab-content active">
-            <div class="main-content">
-                <div class="productos-section">
-                    <div class="categorias-container">
-                        <div class="categoria">
-                            <h3><i class="fas fa-drumstick-bite"></i> Carnitas ($27)</h3>
-                            <div class="botones-grid">
-                                <button class="producto-btn" onclick="agregarProducto('SR', 'Taco Surtida', 27)">
-                                    Surtida <span class="precio">$27</span>
-                                </button>
-                                <button class="producto-btn" onclick="agregarProducto('MZ', 'Taco Maciza', 27)">
-                                    Maciza <span class="precio">$27</span>
-                                </button>
-                                <button class="producto-btn" onclick="agregarProducto('CS', 'Taco Costilla', 27)">
-                                    Costilla <span class="precio">$27</span>
-                                </button>
-                                <button class="producto-btn" onclick="agregarProducto('BR', 'Taco Barriga', 27)">
-                                    Barriga <span class="precio">$27</span>
-                                </button>
-                                <button class="producto-btn" onclick="agregarProducto('BC', 'Taco Buche', 27)">
-                                    Buche <span class="precio">$27</span>
-                                </button>
-                                <button class="producto-btn" onclick="agregarProducto('CR', 'Taco Cuero', 27)">
-                                    Cuero <span class="precio">$27</span>
-                                </button>
-                                <button class="producto-btn" onclick="agregarProducto('NN', 'Taco Nana', 27)">
-                                    Nana <span class="precio">$27</span>
-                                </button>
-                                <button class="producto-btn" onclick="agregarProducto('CH', 'Taco Chamorro', 27)">
-                                    Chamorro <span class="precio">$27</span>
-                                </button>
-                                <button class="producto-btn" onclick="agregarProducto('FL', 'Taco Falda', 27)">
-                                    Falda <span class="precio">$27</span>
-                                </button>
-                                <button class="producto-btn" onclick="agregarProducto('PT', 'Taco Pata', 27)">
-                                    Pata <span class="precio">$27</span>
-                                </button>
-                                <button class="producto-btn" onclick="agregarProducto('ES', 'Taco Espinazo', 27)">
-                                    Espinazo <span class="precio">$27</span>
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <div class="categoria">
-                            <h3><i class="fas fa-fire"></i> Asada ($30)</h3>
-                            <div class="botones-grid">
-                                <button class="producto-btn" onclick="agregarProducto('CN', 'Taco Cecina Natural', 30)">
-                                    Cecina Nat. <span class="precio">$30</span>
-                                </button>
-                                <button class="producto-btn" onclick="agregarProducto('CA', 'Taco Cecina Adobada', 30)">
-                                    Cecina Ado. <span class="precio">$30</span>
-                                </button>
-                                <button class="producto-btn" onclick="agregarProducto('CV', 'Taco Chorizo Verde', 30)">
-                                    Chorizo Ver. <span class="precio">$30</span>
-                                </button>
-                                <button class="producto-btn" onclick="agregarProducto('LN', 'Taco Longaniza', 30)">
-                                    Longaniza <span class="precio">$30</span>
-                                </button>
-                                <button class="producto-btn" onclick="agregarProducto('AG', 'Taco Aguja', 30)">
-                                    Aguja <span class="precio">$30</span>
-                                </button>
-                                <button class="producto-btn" onclick="agregarProducto('AR', 'Taco Arrachera', 30)">
-                                    Arrachera <span class="precio">$30</span>
-                                </button>
-                                <button class="producto-btn" onclick="agregarProducto('CA', 'Taco Chorizo Abanero', 30)">
-                                    Chorizo Aban. <span class="precio">$30</span>
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <div class="categoria">
-                            <h3><i class="fas fa-weight"></i> Kilos</h3>
-                            <div class="botones-grid">
-                                <button class="producto-btn" onclick="agregarProducto('KC', 'Kilo Carnitas', 300)">
-                                    Kilo Carnitas <span class="precio">$300</span>
-                                </button>
-                                <button class="producto-btn" onclick="agregarProducto('KA', 'Kilo Asada', 320)">
-                                    Kilo Asada <span class="precio">$320</span>
-                                </button>
-                                <button class="producto-btn" onclick="agregarProducto('MC', 'Medio Carnitas', 160)">
-                                    Medio Carnitas <span class="precio">$160</span>
-                                </button>
-                                <button class="producto-btn" onclick="agregarProducto('MA', 'Medio Asada', 170)">
-                                    Medio Asada <span class="precio">$170</span>
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <div class="categoria">
-                            <h3><i class="fas fa-wine-bottle"></i> Bebidas</h3>
-                            <div class="botones-grid">
-                                <button class="producto-btn" onclick="agregarProducto('AN', 'Agua Natural', 20)">
-                                    Agua Natural <span class="precio">$20</span>
-                                </button>
-                                <button class="producto-btn" onclick="agregarProducto('AS', 'Agua Saborizada', 40)">
-                                    Agua Sabor <span class="precio">$40</span>
-                                </button>
-                                <button class="producto-btn" onclick="agregarProducto('CC', 'Coca Cola', 27)">
-                                    Coca Cola <span class="precio">$27</span>
-                                </button>
-                                <button class="producto-btn" onclick="agregarProducto('SP', 'Sprite', 27)">
-                                    Sprite <span class="precio">$27</span>
-                                </button>
-                                <button class="producto-btn" onclick="agregarProducto('PS', 'Pepsi', 27)">
-                                    Pepsi <span class="precio">$27</span>
-                                </button>
-                                <button class="producto-btn" onclick="agregarProducto('BG', 'Boing', 27)">
-                                    Boing <span class="precio">$27</span>
-                                </button>
-                                <button class="producto-btn" onclick="agregarProducto('MZ', 'Manzanita', 27)">
-                                    Manzanita <span class="precio">$27</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="cantidad-control">
-                        <span class="cantidad-label">Cantidad:</span>
-                        <button class="cantidad-btn" onclick="adjustCantidad(-1)">
-                            <i class="fas fa-minus"></i>
+        <div class="main-content">
+            <div class="productos-section">
+                <div class="categoria">
+                    <h3><i class="fas fa-drumstick-bite"></i> Tacos de Carnitas ($27)</h3>
+                    <div class="botones-grid">
+                        <button class="producto-btn" onclick="agregarProducto('SR', 'Taco Surtida', 27)">
+                            Surtida <span class="precio">$27</span>
                         </button>
-                        <input type="number" class="cantidad-input" id="producto-cantidad" value="1" min="1" step="1">
-                        <button class="cantidad-btn" onclick="adjustCantidad(1)">
-                            <i class="fas fa-plus"></i>
+                        <button class="producto-btn" onclick="agregarProducto('MZ', 'Taco Maciza', 27)">
+                            Maciza <span class="precio">$27</span>
+                        </button>
+                        <button class="producto-btn" onclick="agregarProducto('CS', 'Taco Costilla', 27)">
+                            Costilla <span class="precio">$27</span>
+                        </button>
+                        <button class="producto-btn" onclick="agregarProducto('BR', 'Taco Barriga', 27)">
+                            Barriga <span class="precio">$27</span>
+                        </button>
+                        <button class="producto-btn" onclick="agregarProducto('BC', 'Taco Buche', 27)">
+                            Buche <span class="precio">$27</span>
+                        </button>
+                        <button class="producto-btn" onclick="agregarProducto('CR', 'Taco Cuero', 27)">
+                            Cuero <span class="precio">$27</span>
+                        </button>
+                        <button class="producto-btn" onclick="agregarProducto('NN', 'Taco Nana', 27)">
+                            Nana <span class="precio">$27</span>
+                        </button>
+                        <button class="producto-btn" onclick="agregarProducto('CH', 'Taco Chamorro', 27)">
+                            Chamorro <span class="precio">$27</span>
+                        </button>
+                        <button class="producto-btn" onclick="agregarProducto('FL', 'Taco Falda', 27)">
+                            Falda <span class="precio">$27</span>
+                        </button>
+                        <button class="producto-btn" onclick="agregarProducto('PT', 'Taco Pata', 27)">
+                            Pata <span class="precio">$27</span>
+                        </button>
+                        <button class="producto-btn" onclick="agregarProducto('ES', 'Taco Espinazo', 27)">
+                            Espinazo <span class="precio">$27</span>
                         </button>
                     </div>
                 </div>
                 
-                <div class="cuenta-section">
-                    <h3><i class="fas fa-receipt"></i> Cuenta Actual</h3>
-                    
-                    <div class="productos-lista" id="lista-productos">
-                        <div class="empty-state">No hay productos agregados</div>
+                <div class="categoria">
+                    <h3><i class="fas fa-fire"></i> Tacos de Asada ($30)</h3>
+                    <div class="botones-grid">
+                        <button class="producto-btn" onclick="agregarProducto('CN', 'Taco Cecina Natural', 30)">
+                            Cecina Natural <span class="precio">$30</span>
+                        </button>
+                        <button class="producto-btn" onclick="agregarProducto('CA', 'Taco Cecina Adobada', 30)">
+                            Cecina Adobada <span class="precio">$30</span>
+                        </button>
+                        <button class="producto-btn" onclick="agregarProducto('CV', 'Taco Chorizo Verde', 30)">
+                            Chorizo Verde <span class="precio">$30</span>
+                        </button>
+                        <button class="producto-btn" onclick="agregarProducto('LN', 'Taco Longaniza', 30)">
+                            Longaniza <span class="precio">$30</span>
+                        </button>
+                        <button class="producto-btn" onclick="agregarProducto('AG', 'Taco Aguja', 30)">
+                            Aguja <span class="precio">$30</span>
+                        </button>
+                        <button class="producto-btn" onclick="agregarProducto('AR', 'Taco Arrachera', 30)">
+                            Arrachera <span class="precio">$30</span>
+                        </button>
+                        <button class="producto-btn" onclick="agregarProducto('CA', 'Taco Chorizo Abanero', 30)">
+                            Chorizo Abanero <span class="precio">$30</span>
+                        </button>
                     </div>
-                    
-                    <div class="totales-container">
-                        <div class="total-line">
-                            <span>Subtotal:</span>
-                            <span id="subtotal">$0.00</span>
-                        </div>
-                        <div class="total-line">
-                            <span>Impuesto (8%):</span>
-                            <span id="impuesto">$0.00</span>
-                        </div>
-                        <div class="total-line total-final">
-                            <span>Total:</span>
-                            <span id="total-final">$0.00</span>
-                        </div>
+                </div>
+                
+                <div class="categoria">
+                    <h3><i class="fas fa-wine-bottle"></i> Bebidas</h3>
+                    <div class="botones-grid">
+                        <button class="producto-btn" onclick="agregarProducto('AN', 'Agua Natural', 20)">
+                            Agua Natural <span class="precio">$20</span>
+                        </button>
+                        <button class="producto-btn" onclick="agregarProducto('AS', 'Agua Saborizada', 40)">
+                            Agua Saborizada <span class="precio">$40</span>
+                        </button>
+                        <button class="producto-btn" onclick="agregarProducto('CC', 'Coca Cola', 27)">
+                            Coca Cola <span class="precio">$27</span>
+                        </button>
+                        <button class="producto-btn" onclick="agregarProducto('SP', 'Sprite', 27)">
+                            Sprite <span class="precio">$27</span>
+                        </button>
+                        <button class="producto-btn" onclick="agregarProducto('PS', 'Pepsi', 27)">
+                            Pepsi <span class="precio">$27</span>
+                        </button>
+                        <button class="producto-btn" onclick="agregarProducto('BG', 'Boing', 27)">
+                            Boing <span class="precio">$27</span>
+                        </button>
+                        <button class="producto-btn" onclick="agregarProducto('MZ', 'Manzanita', 27)">
+                            Manzanita <span class="precio">$27</span>
+                        </button>
                     </div>
-                    
-                    <button class="cobrar-button" id="cobrar-button" onclick="cobrarCuenta()">
-                        <i class="fas fa-cash-register"></i> Cobrar Cuenta
+                </div>
+                
+                <div class="categoria">
+                    <h3><i class="fas fa-crown"></i> Especialidades</h3>
+                    <div class="botones-grid">
+                        <button class="producto-btn" onclick="agregarProducto('KC', 'Kilo de Carnitas', 300)">
+                            Kilo de Carnitas <span class="precio">$300</span>
+                        </button>
+                        <button class="producto-btn" onclick="agregarProducto('TC', 'Taco Combinado', 30)">
+                            Taco Combinado <span class="precio">$30</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="cantidad-control">
+                    <span class="cantidad-label">Cantidad:</span>
+                    <button class="cantidad-btn" onclick="adjustCantidad(-1)">
+                        <i class="fas fa-minus"></i>
                     </button>
-                    
-                    <div class="acciones-rapidas">
-                        <button class="accion-btn reset" onclick="mostrarModalReset()">
-                            <i class="fas fa-trash"></i> Reiniciar
-                        </button>
-                        <button class="accion-btn imprimir" onclick="imprimirTicket()">
-                            <i class="fas fa-receipt"></i> Imprimir
-                        </button>
-                        <button class="accion-btn whatsapp" onclick="compartirWhatsApp()">
-                            <i class="fab fa-whatsapp"></i> WhatsApp
-                        </button>
-                        <button class="accion-btn reporte" onclick="cambiarPestaña('reporte')">
-                            <i class="fas fa-chart-bar"></i> Ver Reporte
-                        </button>
-                    </div>
+                    <input type="number" class="cantidad-input" id="producto-cantidad" value="1" min="1" step="1">
+                    <button class="cantidad-btn" onclick="adjustCantidad(1)">
+                        <i class="fas fa-plus"></i>
+                    </button>
                 </div>
             </div>
-        </div>
-
-        <div id="reporte" class="tab-content">
-            <div class="resumen-ventas">
-                <h3><i class="fas fa-chart-pie"></i> Resumen de Ventas</h3>
-                <div class="resumen-grid">
-                    <div class="resumen-item">
-                        <div class="resumen-label">Ventas Totales</div>
-                        <div class="resumen-valor" id="total-ventas">$0.00</div>
-                        <div class="resumen-label">Periodo completo</div>
+            
+            <div class="cuenta-section">
+                <h3><i class="fas fa-receipt"></i> Cuenta Actual</h3>
+                
+                <div class="productos-lista" id="lista-productos">
+                    <div class="empty-state">No hay productos agregados</div>
+                </div>
+                
+                <div class="totales-container">
+                    <div class="total-line">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">$0.00</span>
                     </div>
-                    <div class="resumen-item">
-                        <div class="resumen-label">Ventas Hoy</div>
-                        <div class="resumen-valor" id="ventas-hoy">$0.00</div>
-                        <div class="resumen-label">${new Date().toLocaleDateString()}</div>
+                    <div class="total-line">
+                        <span>Impuesto (8%):</span>
+                        <span id="impuesto">$0.00</span>
                     </div>
-                    <div class="resumen-item">
-                        <div class="resumen-label">Transacciones</div>
-                        <div class="resumen-valor" id="total-transacciones">0</div>
-                        <div class="resumen-label">Total de cobros</div>
+                    <div class="total-line total-final">
+                        <span>Total:</span>
+                        <span id="total-final">$极速赛车开奖结果历史记录
+                        </span>
                     </div>
                 </div>
-                <button class="limpiar-reporte" onclick="mostrarModalLimpiarReporte()">
-                    <i class="fas fa-broom"></i> Limpiar Reporte
+                
+                <button class="cobrar-button" id="cobrar-button" onclick="cobrarCuenta()">
+                    <i class="fas fa-cash-register"></i> Cobrar Cuenta
                 </button>
-            </div>
-
-            <h3><i class="fas fa-history"></i> Historial de Ventas</h3>
-            <div class="reporte-container" id="reporte-container">
-                <div class="empty-state">No hay ventas registradas</div>
+                
+                <div class="acciones-rapidas">
+                    <button class="accion-btn reset" onclick="resetCuenta()">
+                        <i class="fas fa-trash"></i> Reiniciar
+                    </button>
+                    <button class="accion-btn imprimir" onclick="imprimirTicket()">
+                        <i class="fas fa-receipt"></i> Imprimir
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -824,55 +562,15 @@
         <span id="toast-message"></span>
     </div>
 
-    <div class="modal" id="modal-reset">
-        <div class="modal-content">
-            <h3>¿Reiniciar cuenta?</h3>
-            <p>¿Estás seguro de que quieres reiniciar la cuenta? Se eliminarán todos los productos.</p>
-            <div class="modal-buttons">
-                <button class="modal-btn cancel" onclick="cerrarModal('modal-reset')">Cancelar</button>
-                <button class="modal-btn confirm" onclick="resetCuenta()">Sí, reiniciar</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal" id="modal-limpiar-reporte">
-        <div class="modal-content">
-            <h3>¿Limpiar reporte?</h3>
-            <p>¿Estás seguro de que quieres limpiar todo el historial de ventas? Esta acción no se puede deshacer.</p>
-            <div class="modal-buttons">
-                <button class="modal-btn cancel" onclick="cerrarModal('modal-limpiar-reporte')">Cancelar</button>
-                <button class="modal-btn confirm" onclick="limpiarReporte()">Sí, limpiar</button>
-            </div>
-        </div>
-    </div>
-
     <script>
         let pedidoActual = [];
         let cantidadActual = 1;
         const impuesto = 0.08;
-        let ventas = [];
-        let reporteActualizado = false;
 
         // Cargar datos al iniciar
         document.addEventListener('DOMContentLoaded', () => {
-            cargarDatos();
             actualizarListaProductos();
-            actualizarReporte();
         });
-
-        // Función para cambiar entre pestañas
-        function cambiarPestaña(pestaña) {
-            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-            
-            document.querySelector(`.tab[onclick="cambiarPestaña('${pestaña}')"]`).classList.add('active');
-            document.getElementById(pestaña).classList.add('active');
-            
-            if (pestaña === 'reporte' && !reporteActualizado) {
-                actualizarReporte();
-                reporteActualizado = true;
-            }
-        }
 
         // Función para ajustar la cantidad
         function adjustCantidad(valor) {
@@ -976,35 +674,27 @@
             
             if (!confirm(`Total a cobrar: $${total.toFixed(2)}\n\n¿Confirmar cobro?`)) return;
             
-            // Guardar la venta en el historial
-            const venta = {
-                id: Date.now().toString(),
-                fecha: new Date().toISOString(),
-                productos: [...pedidoActual],
-                subtotal: subtotal,
-                impuesto: impuestoCalculado,
-                total: total
-            };
-            
-            ventas.unshift(venta);
+            // Imprimir ticket automáticamente
+            imprimirTicket();
             
             // Limpiar pedido
             pedidoActual = [];
             
-            // Guardar datos y actualizar UI
-            guardarDatos();
+            // Actualizar UI
             actualizarListaProductos();
-            reporteActualizado = false;
             
             showToast(`Cuenta cobrada - $${total.toFixed(2)}`);
         }
 
         // Función para reiniciar la cuenta
         function resetCuenta() {
+            if (pedidoActual.length === 0) return;
+            
+            if (!confirm('¿Seguro que quieres reiniciar la cuenta? Se perderán todos los productos.')) return;
+            
             pedidoActual = [];
             actualizarListaProductos();
             showToast('Cuenta reiniciada');
-            cerrarModal('modal-reset');
         }
 
         // Función para imprimir ticket
@@ -1155,132 +845,6 @@
             return texto.substring(0, maxLength - 3) + '...';
         }
 
-        // Función para compartir por WhatsApp
-        function compartirWhatsApp() {
-            if (pedidoActual.length === 0) {
-                showToast('No hay productos para compartir');
-                return;
-            }
-            
-            const subtotal = pedidoActual.reduce((sum, item) => sum + item.total, 0);
-            const impuestoCalculado = subtotal * impuesto;
-            const total = subtotal + impuestoCalculado;
-            
-            let mensaje = "📋 *Pedido de Taquería:*\n\n";
-            
-            pedidoActual.forEach(item => {
-                mensaje += `➡️ ${item.nombre} x${item.cantidad} - $${item.total.toFixed(2)}\n`;
-            });
-            
-            mensaje += `\n💰 *Subtotal:* $${subtotal.toFixed(2)}\n`;
-            mensaje += `📊 *Impuesto (8%):* $${impuestoCalculado.toFixed(2)}\n`;
-            mensaje += `🎯 *Total:* $${total.toFixed(2)}\n\n`;
-            mensaje += `🕒 *Hora:* ${new Date().toLocaleString()}`;
-            
-            const url = `https://wa.me/?text=${encodeURIComponent(mensaje)}`;
-            window.open(url, '_blank');
-        }
-
-        // Función para actualizar el reporte de ventas
-        function actualizarReporte() {
-            const reporteContainer = document.getElementById('reporte-container');
-            const hoy = new Date().toDateString();
-            
-            // Calcular totales
-            const totalVentas = ventas.reduce((sum, venta) => sum + venta.total, 0);
-            const ventasHoy = ventas.reduce((sum, venta) => {
-                const fechaVenta = new Date(venta.fecha);
-                return fechaVenta === hoy ? sum + venta.total : sum;
-            }, 0);
-            
-            // Actualizar resumen
-            document.getElementById('total-ventas').textContent = `$${totalVentas.toFixed(2)}`;
-            document.getElementById('ventas-hoy').textContent = `$${ventasHoy.toFixed(2)}`;
-            document.getElementById('total-transacciones').textContent = ventas.length;
-            
-            // Mostrar historial de ventas
-            if (ventas.length === 0) {
-                reporteContainer.innerHTML = '<div class="empty-state">No hay ventas registradas</div>';
-                return;
-            }
-            
-            reporteContainer.innerHTML = '';
-            
-            ventas.forEach(venta => {
-                const fecha = new Date(venta.fecha);
-                const reporteCard = document.createElement('div');
-                reporteCard.className = 'reporte-card';
-                reporteCard.innerHTML = `
-                    <div class="reporte-header">
-                        <div class="reporte-title">Venta #${venta.id.substr(-4)}</div>
-                        <div class="reporte-fecha">${fecha.toLocaleString()}</div>
-                    </div>
-                    <div class="reporte-productos">
-                        ${venta.productos.map(producto => `
-                            <div class="reporte-producto">
-                                <span>${producto.nombre} x${producto.cantidad}</span>
-                                <span>$${producto.total.toFixed(2)}</span>
-                            </div>
-                        `).join('')}
-                    </div>
-                    <div class="reporte-totales">
-                        <div class="reporte-producto">
-                            <span>Subtotal:</span>
-                            <span>$${venta.subtotal.toFixed(2)}</span>
-                        </div>
-                        <div class="reporte-producto">
-                            <span>Impuesto (8%):</span>
-                            <span>$${venta.impuesto.toFixed(2)}</span>
-                        </div>
-                        <div class="reporte-producto">
-                            <span>Total:</span>
-                            <span>$${venta.total.toFixed(2)}</span>
-                        </div>
-                    </div>
-                `;
-                reporteContainer.appendChild(reporteCard);
-            });
-        }
-
-        // Función para limpiar el reporte
-        function limpiarReporte() {
-            ventas = [];
-            guardarDatos();
-            actualizarReporte();
-            showToast('Reporte limpiado');
-            cerrarModal('modal-limpiar-reporte');
-        }
-
-        // Funciones para el modal
-        function mostrarModalReset() {
-            if (pedidoActual.length === 0) {
-                showToast('No hay productos para reiniciar');
-                return;
-            }
-            
-            document.getElementById('modal-reset').style.display = 'flex';
-        }
-
-        function mostrarModalLimpiarReporte() {
-            if (ventas.length === 0) {
-                showToast('No hay ventas para limpiar');
-                return;
-            }
-            
-            document.getElementById('modal-limpiar-reporte').style.display = 'flex';
-        }
-
-        function cerrarModal(modalId) {
-            document.getElementById(modalId).style.display = 'none';
-        }
-
-        // Cerrar modal al hacer clic fuera del contenido
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.style.display = 'none';
-            }
-        }
-
         // Función para mostrar notificaciones toast
         function showToast(mensaje) {
             const toast = document.getElementById('toast');
@@ -1293,18 +857,6 @@
             setTimeout(() => {
                 toast.classList.remove('show');
             }, 3000);
-        }
-
-        // Funciones para guardar y cargar datos
-        function guardarDatos() {
-            localStorage.setItem('tacos_ventas', JSON.stringify(ventas));
-        }
-
-        function cargarDatos() {
-            const ventasGuardadas = localStorage.getItem('tacos_ventas');
-            if (ventasGuardadas) {
-                ventas = JSON.parse(ventasGuardadas);
-            }
         }
     </script>
 </body>
